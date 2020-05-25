@@ -44,6 +44,10 @@ def main():
     parser.add_option("-m", "--memory", action="store", type="string", dest="memory")
     (options, args) = parser.parse_args(sys.argv)
 
+    if len(args) == 1:
+        print("Please, give me something to execute.")
+        sys.exit(0)
+
     # Prepare group.
     group_name = prepare_group(options)
 
